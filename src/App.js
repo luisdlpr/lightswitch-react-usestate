@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import "./App.css"
 
 function App() {
+  // Use state hook to keep track of current theme.  Use light as default
+  const [currentTheme, setTheme] = useState(() => { return "light" })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <body className={ currentTheme }>
+      <div className="title">
+        <div className="logo">Lightswitch</div>
+        <div className="currentTheme">{ currentTheme }</div>
+      </div>
+      <div className="switch">
+        {/* Set theme to opposite of current. */}
+        <button onClick={() => {setTheme(currentTheme === "light" ? "dark" : "light")}}>💡</button>
+      </div>
+    </body>
+  )
 }
 
 export default App;
