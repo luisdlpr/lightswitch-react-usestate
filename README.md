@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Lightswitch - React app
+
+A dynamically changing light/dark mode application developed in React to learn to use the useState React hook. The theme state is stored and updated using useState.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
